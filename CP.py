@@ -36,5 +36,13 @@ i, err = quad(f,T1,T2)
 print("\n"+Compound[row-1])
 print("-----------")
 print("Cp = "+ A2+" + "+B2+"*T + "+C2+"*T^2 + "+D2+"*T^3")
+print("\n")
 print("Delta H = " + str(i) + " J/mol")
+print("With an error of " + str(err))
+
+print("\n")
+def f(T):
+    return (float(A[row-1]) + float(B[row-1]) * T + float(C[row-1]) * T**2 + float(D[row-1]) * T**3)/T
+i, err = quad(f,T1,T2)
+print("Delta S = " + str(i) + " J/(K*mol)")
 print("With an error of " + str(err))
